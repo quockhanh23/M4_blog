@@ -2,15 +2,16 @@ package com.example.test_spring_boot_rest_ajax_blog.controller;
 
 import com.example.test_spring_boot_rest_ajax_blog.model.Blog;
 import com.example.test_spring_boot_rest_ajax_blog.model.Status;
-import com.example.test_spring_boot_rest_ajax_blog.service.BlogServiceImpl;
-import com.example.test_spring_boot_rest_ajax_blog.service.StatusServiceImpl;
+import com.example.test_spring_boot_rest_ajax_blog.service.BlogService;
+import com.example.test_spring_boot_rest_ajax_blog.service.StatusService;
+import com.example.test_spring_boot_rest_ajax_blog.service.impl.BlogServiceImpl;
+import com.example.test_spring_boot_rest_ajax_blog.service.impl.StatusServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -18,9 +19,9 @@ import java.util.Optional;
 @RequestMapping("/api/blogs")
 public class BlogRestController {
     @Autowired
-    private BlogServiceImpl blogService;
+    private BlogService blogService;
     @Autowired
-    private StatusServiceImpl statusService;
+    private StatusService statusService;
 
     @GetMapping("/statuses")
     public ResponseEntity<Iterable<Status>> findAllStatus() {

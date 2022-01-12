@@ -1,8 +1,9 @@
-package com.example.test_spring_boot_rest_ajax_blog.service;
+package com.example.test_spring_boot_rest_ajax_blog.service.impl;
 
 import com.example.test_spring_boot_rest_ajax_blog.model.Blog;
 import com.example.test_spring_boot_rest_ajax_blog.model.Status;
 import com.example.test_spring_boot_rest_ajax_blog.repository.StatusRepository;
+import com.example.test_spring_boot_rest_ajax_blog.service.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
